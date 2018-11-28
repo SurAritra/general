@@ -17,3 +17,6 @@ ls | grep -R -l "500"
 # files named "access.log" in the current directory,
 # you will need to search recursively.
 find ./* -name "access.log*" |xargs -I {} grep -h 500 {}
+
+#Command to get ipaddress from the all the file search 
+find ./* -name "access.log*" |xargs grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'
