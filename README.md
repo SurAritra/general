@@ -20,3 +20,26 @@ find ./* -name "access.log*" |xargs -I {} grep -h 500 {}
 
 #Command to get ipaddress from the all the file search 
 find ./* -name "access.log*" |xargs grep -o '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'
+
+#Gives the count of all files in the directory
+find -L -type f|wc -l
+
+#Sorting a file
+cat access.log | sort
+
+#Count of lines in a file that contain GET
+ls access.log | xargs grep -c "GET"
+
+#Print sequence
+seq 10
+
+#Print ; seperated values in new line
+tr \; \\n<s*
+
+#Remove a file with an extension doc
+find . -name "*.doc" -exec rm -rf {} \;
+
+#Remove a phrase in all files and subdirectories "challenges are difficult"
+sed -i ch **/*xt 
+
+
