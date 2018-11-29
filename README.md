@@ -42,4 +42,10 @@ find . -name "*.doc" -exec rm -rf {} \;
 #Remove a phrase in all files and subdirectories "challenges are difficult"
 sed -i ch **/*xt 
 
+#File extraction,suppose file name is test
+#Here passing the elemnets of the file t*==t***.*** =test.txt
+#Hence the element is outputed as sum of the file numbers
+#File : echo -e "1\n2\n3\n4\n5\n6\n7\n8\n9" > test.txt
+jq -s add<t*
+
 
