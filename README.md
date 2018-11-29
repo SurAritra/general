@@ -48,4 +48,16 @@ sed -i ch **/*xt
 #File : echo -e "1\n2\n3\n4\n5\n6\n7\n8\n9" > test.txt
 jq -s add<t*
 
+$ echo -e '{"a"}'
+{"a"}
+$ echo -e '{"a1":2,"a2":4,"a3":9,"b1":2,"b2":7,"b3":99}'
+{"a1":2,"a2":4,"a3":9,"b1":2,"b2":7,"b3":99}
+$ echo -e '{"a1":2,"a2":4,"a3":9,"b1":2,"b2":7,"b3":99}'>test.txt
+$ mkdir d1
+$ mv test.txt d1/test.txt
+$ jq .'a1'</t*
+$ jq .'a1'<*/t*
+
+#Print all files reccursively without leading directory
+ls -R|grep [A-z]
 
