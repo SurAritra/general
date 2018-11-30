@@ -61,3 +61,11 @@ $ jq .'a1'<*/t*
 #Print all files reccursively without leading directory
 ls -R|grep [A-z]
 
+#Read user input : read x
+
+#arithmatic operation in input and print 
+# $() on echo pass it's output to printf
+# |bc for math opetation ,sam[ple input 5+50*3/20 + (19*2)/7
+read x
+printf "%.3f" $(echo "scale=4 ; $x" |bc)
+
