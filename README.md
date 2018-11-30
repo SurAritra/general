@@ -69,3 +69,5 @@ ls -R|grep [A-z]
 read x
 printf "%.3f" $(echo "scale=4 ; $x" |bc)
 
+
+#grep,sed,awk,jq,seq,echo
